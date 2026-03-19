@@ -381,21 +381,21 @@ function renderCriteria(u){
     html+=grp('g-subir','⬆️','Critérios para subir a Ouro','',[
       {name:'Meta de E-Coins da categoria superior (Ouro)',status:metaSupOk?'ok':'fail',detail:`${u.ecoins.toLocaleString('pt-BR')} de ${u.metaSuperior.toLocaleString('pt-BR')} E-Coins`},
       {name:'Confiabilidade Financeira — Risco de Glosa',status:risco_ok?'ok':'fail',detail:u.risco||'—'},
-      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`PA atual: ${u.pa.toFixed(1)}%`},
-      {name:'Presença no grupo dos 90% que mais contratam projetos',status:proj3?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 3`},
+      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`% contratado: ${u.pa.toFixed(1)}%`},
+      {name:'Presença no grupo das 90% que mais contratam projetos',status:proj3?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 3`},
     ],2);
   } else if(cat==='Ouro'){
     html+=grp('g-manter','🔒','Manutenção na categoria','Critérios para permanecer Ouro',[
       {name:'Meta de E-Coins da categoria',status:metaOk?'ok':'fail',detail:`${u.ecoins.toLocaleString('pt-BR')} de ${u.meta.toLocaleString('pt-BR')} E-Coins`},
       {name:'Confiabilidade Técnica',status:conf_ok?'ok':'fail',detail:u.confiabilidade||'—'},
       {name:'Confiabilidade Financeira — Risco de Glosa',status:risco_ok?'ok':'fail',detail:u.risco||'—'},
-      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`PA atual: ${u.pa.toFixed(1)}%`},
-      {name:'Presença no grupo dos 90% que mais contratam projetos',status:proj3?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 3`},
+      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`% contratado: ${u.pa.toFixed(1)}%`},
+      {name:'Presença no grupo das 90% que mais contratam projetos',status:proj3?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 3`},
     ],0);
     html+=grp('g-subir','⬆️','Critérios para subir a Diamante','',[
       {name:'Meta de E-Coins da categoria superior (Diamante)',status:metaSupOk?'ok':'fail',detail:`${u.ecoins.toLocaleString('pt-BR')} de ${u.metaSuperior.toLocaleString('pt-BR')} E-Coins`},
       {name:'Atingiu meta de E-Coins em 2024 e 2025 (PEO 24/25)',status:(u.atingiuMeta2024&&metaOk)?'ok':'fail',detail:u.atingiuMeta2024?'Meta 2024: ✓':'Meta 2024: ✗'},
-      {name:'Presença no grupo dos 80% que mais contratam projetos',status:pareto?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 8`},
+      {name:'Presença no grupo das 80% que mais contratam projetos',status:pareto?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 8`},
       {name:'Classificada entre as 10 Unidades com mais E-Coins',status:top10?'ok':'fail',detail:top10?'Dentro do top 10':'Fora do top 10'},
     ],5);
   } else if(cat==='Diamante'){
@@ -403,8 +403,8 @@ function renderCriteria(u){
       {name:'Meta de E-Coins da categoria',status:metaOk?'ok':'fail',detail:`${u.ecoins.toLocaleString('pt-BR')} de ${u.meta.toLocaleString('pt-BR')} E-Coins`},
       {name:'Confiabilidade Técnica',status:conf_ok?'ok':'fail',detail:u.confiabilidade||'—'},
       {name:'Confiabilidade Financeira — Risco de Glosa',status:risco_ok?'ok':'fail',detail:u.risco||'—'},
-      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`PA atual: ${u.pa.toFixed(1)}%`},
-      {name:'Presença no grupo dos 80% que mais contratam projetos',status:pareto?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 8`},
+      {name:'Contratação de ≥75% da meta de projetos (PA)',status:pa75?'ok':'fail',detail:`% contratado: ${u.pa.toFixed(1)}%`},
+      {name:'Presença no grupo das 80% que mais contratam projetos',status:pareto?'ok':'fail',detail:`${u.projetos} projeto${u.projetos!==1?'s':''} — mínimo referencial: 8`},
       {name:'Classificada entre as 10 Unidades com mais E-Coins',status:top10?'ok':'fail',detail:top10?'Dentro do top 10':'Fora do top 10'},
     ],0);
   }
